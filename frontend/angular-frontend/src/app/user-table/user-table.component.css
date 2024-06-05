@@ -1,0 +1,59 @@
+*{
+  font-family: 'Arial', sans-serif;
+}
+
+.table-container{
+  border: 1px solid black;
+  margin: 40px;
+}
+
+.container {
+
+  text-align: center;
+  margin-bottom: 20px; /* Add some space between the heading/button container and the table */
+}
+
+table {  
+  width: 80%;
+  margin: 20px auto; /* Center the table and add some top and bottom margin */
+  border-collapse: collapse;
+  border: 1px solid black; /* Add a black border to the table */
+}
+
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center; /* Center align text in table cells */
+  border: 1px solid black;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  margin-right: 5px;
+  padding: 5px 10px; /* Add padding for better appearance */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif; /* Use a simple, classy font */
+}
+
+.edit-btn {
+  background-color: #4CAF50; /* Green background for edit button */
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red background for delete button */
+  color: white;
+}
+
+.pdf-btn{
+  font-size: larger;
+  color: white;
+  background-color: blue;
+
+}

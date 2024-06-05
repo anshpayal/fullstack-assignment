@@ -1,0 +1,11 @@
+<div>
+  <h1>User Management</h1>
+  <app-user-form  [selectedUser]="selectedUser" (userCreated)="onUserCreated($event)"></app-user-form>
+  <app-user-table [users]="users" (edit)="editUser($event)" (delete)="deleteUser($event)"></app-user-table>
+  <div *ngIf="showPdfModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" (click)="closePdfModal()">&times;</span>
+      <app-pdf-viewer [pdfSrc]="pdfData">View pdfData</app-pdf-viewer>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="table-container">
+  <div class="container">
+    <h2>User List</h2>
+    <button class="pdf-btn" (click)="generatePDF()">Generate PDF</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phoneNumber }}</td>
+        <td>{{ user.address }}</td>
+        <td>
+          <button class="edit-btn" (click)="editUser(user)">Edit</button>
+          <button class="delete-btn" (click)="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

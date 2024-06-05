@@ -1,0 +1,22 @@
+<div>
+  <h2>{{ selectedUser ? 'Edit User' : 'Add User' }}</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Name:</label>
+      <input type="text" formControlName="name" required>
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" formControlName="email" required>
+    </div>
+    <div>
+      <label>Phone Number:</label>
+      <input type="text" formControlName="phoneNumber" required>
+    </div>
+    <div>
+      <label>Address:</label>
+      <textarea formControlName="address" required></textarea>
+    </div>
+    <button type="submit">{{ selectedUser ? 'Update User' : 'Add User' }}</button>
+  </form>
+</div>
