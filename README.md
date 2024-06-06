@@ -10,6 +10,7 @@ documents based on the data in the table.
 - Delete the user from table
 - Edit the user from table
 - Generate the pdf of user-table content.
+- PDF view within the application
 
 ### Instruction to run locally:
 1. Navigate to the backend directory:
@@ -69,3 +70,4 @@ ng serve
 - typeorm: This is the TypeORM library itself.
 - jspdf: A library to generate PDFs in JavaScript. 
 - jspdf autotable:  Table plugin for jsPDF. Generate PDF tables with Javascript.
+- ng2-pdf-viewer: PDF Viewer Component for Angular 5+
