@@ -16,14 +16,14 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     UserFormComponent,
     UserTableComponent,
     IntegrationComponent,
-    PdfViewerComponent
+    PdfViewerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PdfViewerModule
+    PdfViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,13 +29,11 @@ export class IntegrationComponent {
 
   addUser(user: User): void {
     this.userService.createUser(user).subscribe(() => {
-      // Reload users after successful addition
       this.loadUsers();
     });
   }
 
   editUser(user: User): void {
-    // Implement edit functionality if needed
     this.selectedUser = { ...user };
     console.log('Edit user:', user);
   }
@@ -43,27 +41,25 @@ export class IntegrationComponent {
   updateUser(user: User): void {
     console.log('Updating user:', user);
     this.userService.updateUser(user.id, user).subscribe(updatedUser => {
-      // Find the index of the updated user in the users array
       console.log('User updated successfully:', updatedUser);
       const index = this.users.findIndex(u => u.id === updatedUser.id);
       if (index !== -1) {
-        // Update the user in the users array with the updated user details
         this.users[index] = { ...updatedUser };
         console.log('Users array after update:', this.users);
       }
       this.loadUsers();
-      this.selectedUser = null; // Clear selected user after successful update
+      this.selectedUser = null; 
     });
   }
 
   deleteUser(user: User): void {
     this.userService.deleteUser(user.id).subscribe(() => {
-      // Reload users after successful deletion
+      
       this.loadUsers();
     });
   }
   onUserCreated(user: User): void {
-    this.users.push(user); // Add new user to the list
+    this.users.push(user); 
   }
 
   onFormSubmit(updatedUser: User): void {
@@ -73,7 +69,7 @@ export class IntegrationComponent {
     } else {
       this.users.push(updatedUser);
     }
-    this.selectedUser = null; // Clear selected user after successful update
+    this.selectedUser = null; 
   }
 
   generatePdf() {
@@ -85,10 +81,10 @@ export class IntegrationComponent {
     });
 
     this.pdfData = doc.output('datauristring');
-    this.showPdfModal = true; // Show the PDF modal
+    this.showPdfModal = true;
   }
 
   closePdfModal() {
-    this.showPdfModal = false; // Close the PDF modal
+    this.showPdfModal = false; 
   }
 }

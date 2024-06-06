@@ -15,7 +15,6 @@ export class UserFormComponent {
   
   @Output() formSubmit = new EventEmitter<User>();
   @Output() userCreated = new EventEmitter<User>();
-  // @Output() formSubmitted = new EventEmitter<User>();
 
 
   constructor(private fb: FormBuilder, private userService: UserService) {
@@ -59,32 +58,3 @@ export class UserFormComponent {
     this.selectedUser = null;
   }
 }
-
-// export class UserFormComponent implements OnInit {
-//   userForm!: FormGroup;
-
-//   constructor(private formBuilder: FormBuilder) { }
-
-//   ngOnInit() {
-//     this.userForm = this.formBuilder.group({
-//       name: ['', Validators.required],
-//       email: ['', [Validators.required, Validators.email]],
-//       phoneNumber: ['', Validators.required],
-//       address: ['', Validators.required]
-//     });
-//   }
-
-//   onSubmit() {
-//     if (this.userForm.valid) {
-//       const newUser: User = {
-//         name: this.userForm.value.name,
-//         email: this.userForm.value.email,
-//         phoneNumber: this.userForm.value.phoneNumber,
-//         address: this.userForm.value.address
-//       };
-
-//       // Handle form submission logic with the newUser object
-//       console.log(newUser);
-//     }
-//   }
-// }

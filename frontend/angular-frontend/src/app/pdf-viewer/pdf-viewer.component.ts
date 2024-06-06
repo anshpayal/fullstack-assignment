@@ -1,5 +1,4 @@
-// pdf-viewer.component.ts
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-pdf-viewer',
@@ -7,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pdf-viewer.component.css']
 })
 export class PdfViewerComponent {
-  @Input() pdfSrc: string | undefined; // Input for PDF source (URL or base64 data)
+  @Input() pdfSrc: string | undefined;
+
 }

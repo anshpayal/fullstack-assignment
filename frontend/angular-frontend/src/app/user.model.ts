@@ -1,5 +1,5 @@
 export interface User {
-    id: number; // Optional id property for existing users
+    id: number; 
     name: string;
     email: string;
     phoneNumber: string;

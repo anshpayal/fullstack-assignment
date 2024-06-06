@@ -47,11 +47,6 @@ export class UserTableComponent {
       tableData.push(rowData);
     });
   
-    // Create a table
-    // doc.autoTable({
-    //   head: [['Name', 'Email', 'Phone Number', 'Address']],
-    //   body: tableData
-    // });
     autoTable(doc,{
       head: [['Name', 'Email', 'Phone Number', 'Address']],
       body: tableData

@@ -7,7 +7,7 @@ import { User } from './user.model';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3000/users'; // Update with your backend URL
+  private apiUrl = 'http://localhost:3000/users';
 
   constructor(private http: HttpClient) { }
 
