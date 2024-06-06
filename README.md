@@ -8,13 +8,14 @@ documents based on the data in the table.
 - User form component
 - User table Component: See all users which are get added from user form.
 - Delete the user from table
-- Edit the user from table (Reload after updating)
+- Edit the user from table
 - Generate the pdf of user-table content.
 
 ### Instruction to run locally:
 1. Navigate to the backend directory:
 ```
 cd backend
+cd nestjs-backend
 ```
 
 2. Install dependencies:
@@ -49,6 +50,7 @@ npm run start
 6. Navigate to the frontend directory:
 ```
 cd ../frontend
+cd angular-frontend
 ```
 
 7. Install dependencies:

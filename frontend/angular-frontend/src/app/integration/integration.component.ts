@@ -65,6 +65,17 @@ export class IntegrationComponent {
   onUserCreated(user: User): void {
     this.users.push(user); // Add new user to the list
   }
+
+  onFormSubmit(updatedUser: User): void {
+    const index = this.users.findIndex(u => u.id === updatedUser.id);
+    if (index !== -1) {
+      this.users[index] = updatedUser;
+    } else {
+      this.users.push(updatedUser);
+    }
+    this.selectedUser = null; // Clear selected user after successful update
+  }
+
   generatePdf() {
     const doc = new jsPDF();
 
