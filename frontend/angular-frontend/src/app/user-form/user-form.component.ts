@@ -32,7 +32,7 @@ export class UserFormComponent {
       this.userForm.patchValue(user); // Populate form fields with selected user details
     }
   }
-  
+
   ngOnInit() {}
 
   onSubmit() {
@@ -43,6 +43,7 @@ export class UserFormComponent {
         const updatedUser: User = { ...this.selectedUser, ...formData };
         this.userService.updateUser(this.selectedUser.id,updatedUser).subscribe((user) => {
           this.formSubmit.emit(user); // Emit event after user update
+          this.resetForm();
         });
       } else {
         // If selectedUser is not provided, create new user
@@ -52,6 +53,10 @@ export class UserFormComponent {
         });
       }
     }
+  }
+  resetForm() {
+    this.userForm.reset();
+    this.selectedUser = null;
   }
 }
 
